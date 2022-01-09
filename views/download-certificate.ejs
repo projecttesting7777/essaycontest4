@@ -42,7 +42,7 @@ const remarks  = '<%-remarks%>';
   //       }
   // });
   const generatePDF = async (name) => {
-      const existingPdfBytes = await fetch("/certificate-2.pdf").then((res) =>
+      const existingPdfBytes = await fetch("/final-certificate.pdf").then((res) =>
         res.arrayBuffer()
       );
 
