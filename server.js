@@ -1024,7 +1024,13 @@ app.get("/essay/reading/:routeKey", function(req, res){
 
 
 app.get("/findresult/student", function(req, res){
-      res.render("find-result", {data : null});
+      let obj = new Date();
+      if(Number(obj.getDate()) >= 15) {
+          res.render("find-result", {data : null});
+      }
+      else{
+          res.render("find-result-undeclared");
+      }
 })
 
 app.post("/findresult/student", function(req, res){
